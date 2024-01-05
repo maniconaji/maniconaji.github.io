@@ -4,7 +4,6 @@
 
 ## Education 			        		
 - BSc in Environmental Engineering | Federico Santa María Technical University (_Nov 2019_)
-- 
 
 ## Work Experience
 **Project Engineer @ The Technological Scientific Center of Valparaíso (_December 2021 - June 2022_)**
