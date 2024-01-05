@@ -6,4 +6,7 @@
 
 ## Projects
 ### Numerical study on the spatial-temporal variability of wave energy in coastal areas.
+
 [Publication](https://repositorio.usm.cl/bitstream/handle/11673/52828/m18727299-8.pdf)
+
+![Median wave energy potential](/assets/img/P_ALL_median.png)
