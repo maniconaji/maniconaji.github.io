@@ -1,20 +1,24 @@
-# Data Scientist
+# Environmental Engineering
 
 #### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
 
-## Education
-- Ph.D., Physics | The University of Texas at Dallas (_May 2022_)								       		
-- M.S., Physics	| The University of Texas at Dallas (_December 2019_)	 			        		
-- B.S., Physics | The University of Texas at Dallas (_May 2017_)
+## Education 			        		
+- BSc in Environmental Engineering | Federico Santa María Technical University (_Nov 2019_)
+- 
 
 ## Work Experience
-**Data Scientist @ Toyota Financial Services (_June 2022 - Present_)**
-- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
-- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+**Project Engineer @ The Technological Scientific Center of Valparaíso(_December 2021 - June 2022_)**
+- Worked in multidisciplinary teams, with experts from IT to mining, to tackle digital transformation and process optimization challenges in Chile's mining industry.
+- Managed four simultaneous projects, articulating tasks between IT and mining experts, creating schedules, participating in and leading meetings, and preparing reports.
+- Analyzed data from the tailings pond of a copper mining company and used it to design a web platform in conjunction with the digital transformation area, which would enable better decision-making.
+- Assisted in setting up, sampling, and analyzing data obtained from a sensor to determine the concentration of copper in an aqueous solution via image analysis. Additionally, he developed a Python program to automate data collection.
+- Collected and analyzed data on the height sensor used in the solvent extraction plant to determine future actions with the team and external assessors.
+- Contributed to gathering information to establish a baseline for a sensor to analyze bubble size distribution in a flotation cell.
 
-**Data Science Consultant @ Shawhin Talebi Ventures LLC (_December 2020 - Present_)**
-- Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios
-- Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes
+**Intern @ DFM Consultores Ambientales (_January 2018 - February 2018_)**
+- Helped gather pertinent information on air quality studies, including pollutant dispersion modeling, meteorology, air quality baselines, and
+data analysis from observed and modeled data (WRF) with MATLAB and CALPUFF View.
+- Collected information on chemical accident dispersion models, analyzed requirements, and operated the SLAB View.
 
 ## Projects
 ### Data-Driven EEG Band Discovery with Decision Trees
