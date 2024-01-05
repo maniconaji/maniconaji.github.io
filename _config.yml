@@ -1,5 +1,5 @@
 title: Manuel Huerta
-logo: /assets/images/WIN_20230508_11_22_39_Pro.jpg
+logo: /assets/img/WIN_20230508_11_22_39_Pro.jpg
 #description: text below image
-show_downloads: true
+show_downloads: false
 theme: jekyll-theme-minimal
