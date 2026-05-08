@@ -1,3 +1,4 @@
+<!-- <p>
 # Environmental Engineering
 
 #### Technical Skills: Python, SQL, MATLAB, QGIS
@@ -14,7 +15,7 @@ This study responds to the pressing need for sustainable energy production by de
 ![Median wave energy potential](/assets/img/P_ALL_median.png)
 *Median wave energy potential*
 
-<!-- <p>
+
     <img src="path_to_image" alt>
     <em>image_caption</em>
 </p> -->
