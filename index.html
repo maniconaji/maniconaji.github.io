@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Environmental Data Scientist</title>
+    <title>Portfolio | Manuel Huerta - Environmental Data Scientist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #059669; /* Emerald Green */
-            --secondary: #1e293b; /* Slate Gray */
+            --primary: #2563eb; 
+            --secondary: #1e293b;
             --bg: #f8fafc;
         }
         body {
@@ -20,200 +21,301 @@
         }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .hero-gradient {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+        }
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .project-card:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -12px rgba(37, 99, 235, 0.15);
         }
         .skill-tag {
-            background: rgba(5, 150, 105, 0.1);
+            background: rgba(37, 99, 235, 0.1);
             color: var(--primary);
+        }
+        section {
+            scroll-margin-top: 5rem;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold">M</div>
-                    <span class="font-bold text-xl tracking-tight text-slate-800">Mani<span class="text-emerald-600">.data</span></span>
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold shadow-lg shadow-blue-200">MH</div>
+                    <span class="font-bold text-xl tracking-tight text-slate-800 italic">Portfolio - <span class="text-blue-600">Manuel Huerta</span></span>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                    <a href="#about" class="hover:text-emerald-600 transition">About</a>
-                    <a href="#projects" class="hover:text-emerald-600 transition">Projects</a>
-                    <a href="#skills" class="hover:text-emerald-600 transition">Technical Stack</a>
-                    <a href="#contact" class="px-4 py-2 bg-slate-900 text-white rounded-full hover:bg-emerald-600 transition">Contact</a>
+                    <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#skills" class="hover:text-blue-600 transition-colors">Technical Stack</a>
+                    <a href="#contact" class="px-5 py-2 bg-slate-900 text-white rounded-full hover:bg-blue-600 transition-all transform hover:scale-105">Contact</a>
                 </div>
-                <button class="md:hidden text-slate-600" id="mobile-menu-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="about" class="pt-32 pb-20 px-4 hero-gradient">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-emerald-700 uppercase bg-emerald-100 rounded-full">
+    <header id="hero" class="pt-40 pb-16 px-4 hero-gradient overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative">
+            <div class="inline-block px-4 py-1.5 mb-8 text-xs font-bold tracking-widest text-blue-700 uppercase bg-blue-100 rounded-full border border-blue-200">
                 Environmental Engineer ➔ Data Scientist
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
-                Decoding Nature through <span class="text-emerald-600">Data Intelligence.</span>
+            <h1 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+                Engineering Domain + <br><span class="text-blue-600 underline decoration-blue-200 underline-offset-8">Data Intelligence.</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-                Specializing in the intersection of environmental engineering and predictive analytics. 
-                Transforming complex ecological datasets into actionable insights through Machine Learning and GIS.
+            <p class="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed max-w-3xl mx-auto font-light">
+                <strong>Environmental Engineer</strong> with a focus on <strong>Environmental Informatics</strong>. 
+                Bridging the gap between complex industrial processes and predictive modeling.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#projects" class="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 shadow-lg shadow-emerald-200 transition text-lg">View Projects</a>
-                <a href="https://github.com/maniconaji" target="_blank" class="px-8 py-4 bg-white border border-slate-200 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 transition text-lg flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    GitHub Repositories
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+                <a href="#projects" class="w-full sm:w-auto px-10 py-5 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 shadow-2xl shadow-blue-200 transition-all text-lg transform hover:-translate-y-1">
+                    Explore Work
+                </a>
+                <a href="https://github.com/maniconaji" target="_blank" class="w-full sm:w-auto px-10 py-5 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all text-lg flex items-center justify-center transform hover:-translate-y-1">
+                    GitHub
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Project Gallery -->
+    <!-- About Me Section -->
+    <section id="about" class="py-24 px-4 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Columna Izquierda: Perfil e Identidad (Unida) -->
+                <div class="lg:col-span-7">
+                    <!-- Fila Superior: Foto + Título -->
+                    <div class="flex items-center gap-6 mb-10">
+                        <div class="relative shrink-0">
+                            <div class="absolute inset-0 bg-blue-600 rounded-full blur-xl opacity-10 scale-110"></div>
+                            <img src="assets/img/CV_Foto06.JPEG" alt="Manuel Huerta" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-blue-50 shadow-xl relative z-10">
+                        </div>
+                        <div>
+                            <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">Professional <br><span class="text-blue-600">Trajectory.</span></h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Texto Descriptivo Abajo -->
+                    <div class="space-y-6 text-slate-600 leading-relaxed text-base md:text-lg pr-4">
+                        <p>
+                            I am an <strong>Environmental Engineer</strong> from UTFSM (Chile), graduated with maximum distinction. My journey has taken me from lead industrial process engineering to the heart of Europe.
+                        </p>
+                        <p>
+                            Currently based in <strong>Vienna, Austria</strong>, I am deepening my expertise in Environmental Informatics. My background includes managing large-scale research projects where I implemented digital transformation and automated ETL pipelines, reducing manual efforts by up to 70%.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjetas de Logros -->
+                <div class="lg:col-span-5 grid sm:grid-cols-2 gap-4 mt-8 lg:mt-0">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-900 mb-2 text-sm">Digital Transformation</h4>
+                        <p class="text-xs text-slate-500">Led 4 industrial research projects at CCTVAL, translating operational requirements into technical specifications.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-900 mb-2 text-sm">Climate Modeling</h4>
+                        <p class="text-xs text-slate-500">Expertise in pollutant dispersion (AERMOD, CALPUFF) and impact assessments (EIA/DIA).</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-900 mb-2 text-sm">Multilingual</h4>
+                        <p class="text-xs text-slate-500">Spanish (Native), German (C1 - Proficient), English (B2 - Fluent).</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-900 mb-2 text-sm">Academic Excellence</h4>
+                        <p class="text-xs text-slate-500">Distinción Máxima (100/100) in thesis on wave energy potential modeling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Projects Section -->
     <section id="projects" class="py-24 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Featured Projects</h2>
-                <p class="text-slate-600 max-w-xl">A selection of work demonstrating the transition from raw engineering data to predictive machine learning models.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <article class="project-card bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden flex flex-col">
-                    <div class="h-48 bg-emerald-900 flex items-center justify-center text-emerald-100 p-8 text-center">
-                        <span class="text-xs mono opacity-75 uppercase tracking-widest">Wrangling & Prediction</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-3">Soil Contaminant Prediction</h3>
-                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                            <strong>Problem:</strong> Inconsistent monitoring data for tracking hazardous plumes.<br>
-                            <strong>Impact:</strong> Implemented a Random Forest Regression model that <strong>reduced prediction error by 22%</strong> compared to traditional methods.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">Python</span>
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">Scikit-Learn</span>
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">Pandas</span>
-                        </div>
-                        <a href="https://github.com/maniconaji" target="_blank" class="mt-auto inline-flex items-center text-emerald-600 font-semibold hover:underline">
-                            View Repository <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden flex flex-col">
-                    <div class="h-48 bg-slate-800 flex items-center justify-center text-slate-100 p-8 text-center">
-                        <span class="text-xs mono opacity-75 uppercase tracking-widest">Deep Learning / Time-Series</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-3">Time-Series: Carbon Sequestration</h3>
-                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                            <strong>Problem:</strong> Quantifying net ecosystem exchange from sparse eddy covariance flux data.<br>
-                            <strong>Impact:</strong> Developed an LSTM Neural Network for gap-filling time-series data, achieving an <strong>R² = 0.94</strong>.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">PyTorch</span>
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">Time-Series</span>
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">NumPy</span>
-                        </div>
-                        <a href="https://github.com/maniconaji" target="_blank" class="mt-auto inline-flex items-center text-emerald-600 font-semibold hover:underline">
-                            View Repository <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden flex flex-col">
-                    <div class="h-48 bg-emerald-600 flex items-center justify-center text-white p-8 text-center">
-                        <span class="text-xs mono opacity-75 uppercase tracking-widest">Geospatial Analytics</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-3">Urban Heat Island Dashboard</h3>
-                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                            <strong>Problem:</strong> Difficulty visualizing cooling effects of canopy coverage in urban heat islands.<br>
-                            <strong>Impact:</strong> Interactive dashboard to <strong>map vulnerability indices for 500+ neighborhoods</strong>.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">GeoPandas</span>
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">Folium</span>
-                            <span class="skill-tag px-3 py-1 rounded-md text-xs font-semibold">Streamlit</span>
-                        </div>
-                        <a href="https://github.com/maniconaji" target="_blank" class="mt-auto inline-flex items-center text-emerald-600 font-semibold hover:underline">
-                            View Repository <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Stack -->
-    <section id="skills" class="py-24 px-4 bg-slate-900 text-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6">Technical Ecosystem</h2>
-                    <p class="text-slate-400 mb-8 leading-relaxed">
-                        My expertise lies in merging traditional environmental engineering principles with modern data science workflows to build resilient systems.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div>
-                            <h4 class="text-emerald-500 font-bold mb-3 uppercase tracking-widest text-xs">Analytics</h4>
-                            <ul class="space-y-2 text-sm text-slate-300">
-                                <li>• Machine Learning</li>
-                                <li>• Bayesian Statistics</li>
-                                <li>• Time-Series Forecasting</li>
-                                <li>• Feature Engineering</li>
-                            </ul>
+                    <h2 class="text-4xl font-black text-slate-900 mb-4">Core Projects</h2>
+                    <p class="text-slate-600 max-w-xl text-lg">Harnessing data for industrial efficiency and environmental sustainability.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Project: Multispectral ETL -->
+                <article class="project-card bg-white border border-slate-100 rounded-3xl overflow-hidden flex flex-col group shadow-sm">
+                    <div class="h-48 bg-slate-900 overflow-hidden relative">
+                        <img src="https://www.mdpi.com/sensors/sensors-22-09790/article_deploy/html/images/sensors-22-09790-g001.png" 
+                             alt="Multispectral Analyzer Technical Diagram" 
+                             class="w-full h-full object-contain p-4 bg-white group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/5 group-hover:opacity-0 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-[9px] uppercase font-black tracking-widest bg-blue-600 text-white px-2 py-1 rounded shadow-lg">ETL & Automation</span>
                         </div>
-                        <div>
-                            <h4 class="text-emerald-500 font-bold mb-3 uppercase tracking-widest text-xs">Engineering</h4>
-                            <ul class="space-y-2 text-sm text-slate-300">
-                                <li>• Hydrological Modeling</li>
-                                <li>• Spatial Analysis (GIS)</li>
-                                <li>• Emissions Monitoring</li>
-                                <li>• Regulatory Compliance</li>
-                            </ul>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600">Multispectral ETL Pipeline</h3>
+                        <p class="text-slate-500 text-xs mb-4 leading-relaxed">
+                            Automated data pipelines for image-based copper analyzers. Reduced manual effort by <strong>70%</strong> using Python and FFmpeg.
+                        </p>
+                        <ul class="flex flex-wrap gap-2 mb-6 mt-auto text-[10px] font-bold uppercase mono">
+                            <li class="skill-tag px-2 py-0.5 rounded-full">Python</li>
+                            <li class="skill-tag px-2 py-0.5 rounded-full">FFmpeg</li>
+                        </ul>
+                        <a href="https://github.com/maniconaji/captureimages" target="_blank" class="flex items-center text-slate-900 text-sm font-bold">
+                            View Repo <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project: AI in Water -->
+                <article class="project-card bg-white border border-slate-100 rounded-3xl overflow-hidden flex flex-col group shadow-sm">
+                    <div class="h-48 bg-blue-900 overflow-hidden relative text-center">
+                        <img src="https://thecsruniverse.com/adminxsafe/uploads/EcoLab.jpg" 
+                             alt="Water Management Lab & Field Work" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 group-hover:opacity-20 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 z-10 text-left">
+                            <span class="text-[9px] uppercase font-black tracking-widest bg-blue-600 text-white px-2 py-1 rounded shadow-lg">Water AI</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600">Hydrological Analytics</h3>
+                        <p class="text-slate-500 text-xs mb-4 leading-relaxed">
+                            Applying AI to optimize water management. Models developed for concentration analysis and data integrity in hydrological cycles.
+                        </p>
+                        <ul class="flex flex-wrap gap-2 mb-6 mt-auto text-[10px] font-bold uppercase mono">
+                            <li class="skill-tag px-2 py-0.5 rounded-full">ML</li>
+                            <li class="skill-tag px-2 py-0.5 rounded-full">Hydrology</li>
+                        </ul>
+                        <a href="https://github.com/maniconaji/desafio_AInwater" target="_blank" class="flex items-center text-slate-900 text-sm font-bold">
+                            View Repo <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project: Price Challenge -->
+                <article class="project-card bg-white border border-slate-100 rounded-3xl overflow-hidden flex flex-col group shadow-sm">
+                    <div class="h-48 bg-slate-900 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1000" 
+                             alt="Market Price Forecasting" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 group-hover:opacity-20 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-[9px] uppercase font-black tracking-widest bg-blue-900 text-white px-2 py-1 rounded shadow-lg">Forecasting</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600">Market Pricing Challenge</h3>
+                        <p class="text-slate-500 text-xs mb-4 leading-relaxed">
+                            Price prediction models for Spike challenge using time-series analysis and advanced feature engineering.
+                        </p>
+                        <ul class="flex flex-wrap gap-2 mb-8 mt-auto text-[10px] font-bold uppercase mono">
+                            <li class="skill-tag px-2 py-0.5 rounded-full">Series</li>
+                            <li class="skill-tag px-2 py-0.5 rounded-full">Forecasting</li>
+                        </ul>
+                        <a href="https://github.com/maniconaji/desafio_spike_precios" target="_blank" class="flex items-center text-slate-900 text-sm font-bold">
+                            View Repo <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project: 30-Day Chart Challenge -->
+                <article class="project-card bg-white border border-slate-100 rounded-3xl overflow-hidden flex flex-col group shadow-sm">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" 
+                             alt="Data Viz Showcase" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 group-hover:opacity-20 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-[9px] uppercase font-black tracking-widest bg-blue-600 text-white px-2 py-1 rounded shadow-lg">Visualization</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600">30-Day Chart Challenge</h3>
+                        <p class="text-slate-500 text-xs mb-4 leading-relaxed">
+                            Data storytelling through 30 environmental visualizations using Seaborn, Matplotlib, and Plotly.
+                        </p>
+                        <ul class="flex flex-wrap gap-2 mb-8 mt-auto text-[10px] font-bold uppercase mono">
+                            <li class="skill-tag px-2 py-0.5 rounded-full">Storytelling</li>
+                            <li class="skill-tag px-2 py-0.5 rounded-full">Viz Stack</li>
+                        </ul>
+                        <a href="https://github.com/maniconaji/30DayChartChallenge2026" target="_blank" class="flex items-center text-slate-900 text-sm font-bold">
+                            View Repo <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Stack Section -->
+    <section id="skills" class="py-24 px-4 bg-slate-950 text-white relative">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl font-black mb-8 leading-tight">Technical <br><span class="text-blue-500">Infrastructure.</span></h2>
+                    <p class="text-slate-400 text-lg mb-12 max-w-md">Bridging environmental science and computational intelligence with a modern tech stack.</p>
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm text-slate-300">Python / R / MATLAB</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm text-slate-300">QGIS / ArcGIS / GEE</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm text-slate-300">AERMOD / CALPUFF</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm text-slate-300">SQL / PostgreSQL</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm text-slate-300">Power BI / Tableau</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm text-slate-300">GitHub CI/CD / Linux</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
-                    <div class="space-y-6">
+
+                <div class="bg-slate-900 p-10 rounded-[2.5rem] border border-slate-800 shadow-2xl">
+                    <div class="space-y-8">
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="mono text-xs">Python (Pandas, Scikit, PyTorch)</span>
-                                <span class="text-xs">95%</span>
+                            <div class="flex justify-between mb-3 text-[10px] uppercase font-bold text-slate-400">
+                                <span>Data Science (Pandas, PyTorch, ML)</span>
+                                <span class="text-blue-500">95%</span>
                             </div>
-                            <div class="w-full bg-slate-700 h-1 rounded-full">
-                                <div class="bg-emerald-500 h-1 rounded-full w-[95%]"></div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-blue-500 h-full w-[95%]"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="mono text-xs">SQL & Data Warehousing</span>
-                                <span class="text-xs">85%</span>
+                            <div class="flex justify-between mb-3 text-[10px] uppercase font-bold text-slate-400">
+                                <span>Environmental Modeling & GIS</span>
+                                <span class="text-blue-500">92%</span>
                             </div>
-                            <div class="w-full bg-slate-700 h-1 rounded-full">
-                                <div class="bg-emerald-500 h-1 rounded-full w-[85%]"></div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-blue-500 h-full w-[92%]"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="mono text-xs">GIS (QGIS, ArcGIS, GeoPandas)</span>
-                                <span class="text-xs">90%</span>
+                            <div class="flex justify-between mb-3 text-[10px] uppercase font-bold text-slate-400">
+                                <span>Industrial Process Control</span>
+                                <span class="text-blue-500">88%</span>
                             </div>
-                            <div class="w-full bg-slate-700 h-1 rounded-full">
-                                <div class="bg-emerald-500 h-1 rounded-full w-[90%]"></div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-blue-500 h-full w-[88%]"></div>
                             </div>
                         </div>
                     </div>
@@ -222,28 +324,45 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="py-12 border-t border-slate-200 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
-            <div class="mb-4 md:mb-0">
-                &copy; 2024 Environmental Data Portfolio. Built with Gemini Canvas.
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-black text-slate-900 mb-6">Let's solve <br><span class="text-blue-600">Environmental Challenges.</span></h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-12 mb-16">
+                <a href="mailto:manuel.huerta@gmx.at" class="px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all shadow-xl transform hover:-translate-y-1 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    Email Me
+                </a>
+                
+                <a href="Huerta_Manuel_Lebenslauf.pdf" download="Huerta_Manuel_Lebenslauf.pdf" class="px-8 py-4 bg-blue-100 text-blue-700 font-bold rounded-2xl hover:bg-blue-200 transition-all border border-blue-200 transform hover:-translate-y-1 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4-4v12"/></svg>
+                    Download CV
+                </a>
             </div>
-            <div class="flex space-x-6">
-                <a href="https://github.com/maniconaji" class="hover:text-emerald-600">GitHub</a>
-                <a href="#" class="hover:text-emerald-600">LinkedIn</a>
+
+            <!-- Social Links -->
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="https://www.linkedin.com/in/manuel-huerta-quian/" target="_blank" class="text-slate-500 hover:text-blue-600 font-bold transition-colors">LinkedIn</a>
+                <a href="https://www.xing.com/profile/Manuel_HuertaQuian" target="_blank" class="text-slate-500 hover:text-blue-600 font-bold transition-colors">Xing</a>
+                <a href="https://github.com/maniconaji" target="_blank" class="text-slate-500 hover:text-blue-600 font-bold transition-colors">GitHub</a>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-slate-400 text-xs tracking-widest uppercase font-bold">
+                <p>&copy; 2026 Manuel Huerta - Environmental Engineer & Data Scientist</p>
+                <p class="mt-2 md:mt-0">Vienna, Austria</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll adjustment
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 64,
+                        top: target.offsetTop,
                         behavior: 'smooth'
                     });
                 }
